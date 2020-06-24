@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Médecins{% endblock %}
+
+{% block body %}
+
+    <h1 class="docTitle">Sélectionnez le médecin de votre choix</h1>
+
+    {% for item in doctors %}
+        <img src="{{ item.photo }}"> <p class="docName"> {{ item.firstname }} {{ item.lastname }}</p>
+        {% for item in categories %}
+            <p class="docCategory"> {{ item.name }}</p>
+        {% endfor %}
+        <p class="docAddress"></p> [{{ item.address }}
+        <h2 class="docDate"> Prochaine Disponibilité : </h2>
+        <p class="docAvailable"> {{ item.available }} </p>
+
+    {% endfor %}
+{% endblock %}

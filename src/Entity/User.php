@@ -71,6 +71,21 @@ class User implements UserInterface
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $photo;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $job;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $available;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -235,6 +250,42 @@ class User implements UserInterface
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(string $photo): self
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getJob(): ?string
+    {
+        return $this->job;
+    }
+
+    public function setJob(string $job): self
+    {
+        $this->job = $job;
+
+        return $this;
+    }
+
+    public function getAvailable(): ?\DateTimeInterface
+    {
+        return $this->available;
+    }
+
+    public function setAvailable(\DateTimeInterface $available): self
+    {
+        $this->available = $available;
 
         return $this;
     }
