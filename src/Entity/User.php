@@ -71,16 +71,6 @@ class User implements UserInterface
      */
     private $category;
 
-    /**
-     * @ORM\OneToMany(targetEntity=FeedBack::class, mappedBy="user")
-     */
-    private $feedBacks;
-
-    public function __construct()
-    {
-        $this->feedBacks = new ArrayCollection();
-    }
-
     public function getId(): ?int
     {
         return $this->id;
