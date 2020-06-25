@@ -83,4 +83,20 @@
     #cardProfil {
        border: none;
     }
+
+    /*//// RECAP /////*/
+
+    .container-recap {
+        text-align: center;
+        margin-top: 6em;
+        offset-position: 20px;
+        background-color: #87cefa;
+        width: 80%;
+        border-radius: 3px;
+        border: solid #183691 2px;
+    }
+
+    .recap-button {
+        margin-top: 2em;
+    }
 }

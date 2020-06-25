@@ -34,7 +34,7 @@ class SearchByCategoryDoctorType extends AbstractType
     {
         $resolver->setDefaults([
             'attr' => [
-                'novalidate' => 'novalidate'
+                'novalidate' => 'novalidate',
             ]
         ]);
     }

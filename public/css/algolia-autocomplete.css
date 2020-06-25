@@ -1,6 +1,7 @@
-.algolia-autocomplete {
+  .algolia-autocomplete {
     width: 100%;
   }
+
   .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
     width: 100%;
   }

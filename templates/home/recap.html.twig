@@ -3,5 +3,14 @@
 {% block title %}Recap{% endblock %}
 
 {% block body %}
-
+    <div class="container-fluid container-recap" id="thanks">
+        <h1>Thank You !</h1>
+        <p>We sent you an email with all the informations about your booking.</p>
+        <p>We hope to see you soon </p>
+    </div>
+    <div class="row justify-content-center recap-button">
+        <a href="{{ path('home') }}">
+            <button class="btn btn-primary">Go back !</button>
+        </a>
+    </div>
 {% endblock %}
