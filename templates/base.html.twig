@@ -9,14 +9,17 @@
               integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
               crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     {% endblock %}
 </head>
 <nav class="navbar">
     <img class="menu" src="https://i.postimg.cc/VvrBwbXw/588a6507d06f6719692a2d15.png">
-    <p class="logo"> LOGO </p>
-    <img class="user" src="https://i.postimg.cc/2jK2tCnm/585e4bf3cb11b227491c339a.png" alt="userlogo">
+    <p class="logo bold " >My <span class="black">Doctrip</span></p>
 
+    <img class="user" src="https://i.postimg.cc/2jK2tCnm/585e4bf3cb11b227491c339a.png" alt="userlogo">
 </nav>
+
+
 <body>
 {% block body %}{% endblock %}
 {% block javascripts %}
