@@ -39,7 +39,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     /**
      * @return User[]
      */
-    public function findAllUser()
+    public function findAllUsers()
     {
         return $this->createQueryBuilder('u')
             ->orderBy('u.lastname', 'ASC')
@@ -47,6 +47,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             ->execute()
             ;
     }
+
 
     /**
      * @return User[]

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking index{% endblock %}
+
+{% block body %}
+    <h1>Booking index</h1>
+
+    {{ include('/booking/calendar.html.twig') }}
+    {{ include('booking/_form.html.twig') }}
+
+{% endblock %}

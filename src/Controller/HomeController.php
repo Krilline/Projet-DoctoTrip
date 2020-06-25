@@ -47,14 +47,4 @@ class HomeController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-
-    /**
-     * @Route("/doctors", name="doctors")
-     */
-    public function doctors(UserRepository $userRepository)
-    {
-        return $this->render('home/doctors.html.twig', [
-            'doctors' => $userRepository->findAll(),
-        ]);
-    }
 }

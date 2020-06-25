@@ -9,6 +9,7 @@
 /var/
 /src/DataFixtures/
 /vendor/
+/.idea/workspace.xml/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
