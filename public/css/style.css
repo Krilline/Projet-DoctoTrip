@@ -1,0 +1,17 @@
+.container {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+img{
+    width: 45%;
+    border-radius: 6px;
+    margin-top: 3px;
+}
+
+.btn-info{
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
