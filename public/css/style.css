@@ -139,7 +139,7 @@ img {
 
     .search-autocomplete {
         margin-top: 7em;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
 
     #cardProfil {
@@ -151,7 +151,6 @@ img {
     }
 
     #docPhotoIndex{
-        height: 200px;
         border-radius: 5%;
         width: 50%;
         margin-bottom: 1em;

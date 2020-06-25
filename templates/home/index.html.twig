@@ -20,10 +20,8 @@
                 <img id="docPhotoIndex" class="card-img-top" src="{{ result.photo }}" alt="Card image cap">
             </div>
             <div class="card_ctn">
+                <h5 class="card-title bold docName">{{ result.firstname }} {{ result.lastname }}</h5>
                 <div class="card center" style="width: 20rem;">
-                    <div class="card-body">
-                        <h5 class="card-title bold docName">{{ result.firstname }} {{ result.lastname }}</h5>
-                    </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bold">{{ result.category.name }}</li>
                         <li class="list-group-item"><span class="bold"> Address :</span> {{ result.address }}</li>
