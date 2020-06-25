@@ -47,12 +47,20 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/profil/{id}'", name="profil")
+     * @Route("/profil/{id}", name="profil")
      */
     public function profil(User $user)
     {
         return $this->render('home/profil.html.twig', [
             'user' => $user,
         ]);
+    }
+
+    /**
+     * @Route("/payment", name="payment")
+     */
+    public function payment()
+    {
+        return $this->render('home/payment.html.twig');
     }
 }
