@@ -77,11 +77,6 @@ class User implements UserInterface
     private $photo;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $job;
-
-    /**
      * @ORM\Column(type="date")
      */
     private $available;

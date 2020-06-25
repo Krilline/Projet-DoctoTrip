@@ -21,9 +21,8 @@ class HomeController extends AbstractController
 
     /**
      * @Route("/doctors", name="doctors")
-     * @return Response
      */
-    public function doctors(UserRepository $userRepository, CategoryRepository $categoryRepository): Response
+    public function doctors(UserRepository $userRepository, CategoryRepository $categoryRepository)
     {
         return $this->render('home/doctors.html.twig', [
             'doctors' => $userRepository->findAll(),

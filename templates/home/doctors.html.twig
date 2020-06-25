@@ -8,12 +8,9 @@
 
     {% for item in doctors %}
         <img src="{{ item.photo }}"> <p class="docName"> {{ item.firstname }} {{ item.lastname }}</p>
-        {% for item in categories %}
-            <p class="docCategory"> {{ item.name }}</p>
-        {% endfor %}
+        <p class="docCategory"> {{ item.category.name }}</p>
         <p class="docAddress"></p> [{{ item.address }}
         <h2 class="docDate"> Prochaine Disponibilité : </h2>
-        <p class="docAvailable"> {{ item.available }} </p>
-
+        <p class="docAvailable"> {{ item.available |date('d/m/Y') }}</p>
     {% endfor %}
 {% endblock %}
