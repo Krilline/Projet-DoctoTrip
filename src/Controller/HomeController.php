@@ -5,8 +5,6 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Entity\User;
 use App\Form\SearchByCategoryDoctorType;
-use App\Repository\CategoryRepository;
-use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -45,6 +43,16 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'results' => $results,
             'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/profil/{id}'", name="profil")
+     */
+    public function profil(User $user)
+    {
+        return $this->render('home/profil.html.twig', [
+            'user' => $user,
         ]);
     }
 }

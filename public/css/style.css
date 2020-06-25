@@ -80,4 +80,7 @@
         margin-bottom: 4em;
     }
 
+    #cardProfil {
+       border: none;
+    }
 }

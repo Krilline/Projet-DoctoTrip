@@ -83,6 +83,11 @@ class User implements UserInterface
      */
     private $available;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $resume;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -283,6 +288,18 @@ class User implements UserInterface
     public function setAvailable(\DateTimeInterface $available): self
     {
         $this->available = $available;
+
+        return $this;
+    }
+
+    public function getResume(): ?string
+    {
+        return $this->resume;
+    }
+
+    public function setResume(string $resume): self
+    {
+        $this->resume = $resume;
 
         return $this;
     }
