@@ -49,7 +49,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/profil/{id}'", name="profil")
+     * @Route("/profil/{id}", name="profil")
      */
     public function profil(User $user)
     {
@@ -59,6 +59,7 @@ class HomeController extends AbstractController
     }
 
     /**
+
      * @Route("/housing", name="index_housing")
      * @param HousingRepository $housingRepository
      * @return Response
@@ -86,5 +87,13 @@ class HomeController extends AbstractController
     public function detailedHousing(): Response
     {
         return $this->render('home/imageHousing.html.twig');
+    }
+
+    /**
+     * @Route("/meet", name="meet")
+     */
+    public function meet()
+    {
+        return $this->render('home/meet.html.twig');
     }
 }
