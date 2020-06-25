@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+    <div class="row">
+    {% for housing in housings %}
+        <div class="col-lg-4 col-md-6 col-sm-7">
+            <h5 class="card-title">{{ housing.name }}</h5>
+            <img class="card-img-top" src="{{ housing.poster }}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><img class="logo_housing" src="https://us.123rf.com/450wm/tmricons/tmricons1510/tmricons151000176/45804740-plan-pointeur-ic%C3%B4ne-bouton-de-localisation-.jpg?ver=6" alt="">{{ housing.city.name }}</p>
+                <p class="card-text"><img class="logo_housing" src="https://banner2.cleanpng.com/20180425/qgq/kisspng-address-symbol-5ae01b2bce49c7.004939681524636459845.jpg" alt="">{{ housing.address }}</p>
+                <p class="bouton"><a href="{{ path('show_housing') }}" class="btn">see</a></p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

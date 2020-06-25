@@ -2,10 +2,12 @@
 
 namespace App\Controller;
 
+use App\Repository\HousingRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Category;
 use App\Entity\User;
 use App\Form\SearchByCategoryDoctorType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -54,6 +56,37 @@ class HomeController extends AbstractController
         return $this->render('home/profil.html.twig', [
             'user' => $user,
         ]);
+    }
+
+    /**
+
+     * @Route("/housing", name="index_housing")
+     * @param HousingRepository $housingRepository
+     * @return Response
+     */
+    public function housing(HousingRepository $housingRepository): Response
+    {
+        return $this->render('home/housing.html.twig', [
+            'housings' => $housingRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/housing/show", name="show_housing")
+     * @return Response
+     */
+    public function showHousing(): Response
+    {
+        return $this->render('home/showHousing.html.twig');
+    }
+
+    /**
+     * @Route("/housing/detailed", name="detailed_housing")
+     * @return Response
+     */
+    public function detailedHousing(): Response
+    {
+        return $this->render('home/imageHousing.html.twig');
     }
 
     /**

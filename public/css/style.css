@@ -1,3 +1,60 @@
+
+.container {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-top: 20%;
+    margin-left: 4%;
+}
+.card-text{
+    color: #787878;
+}
+
+h5 {
+    color: #c8a847
+}
+
+.logo_housing {
+    width: 7%;
+    height: 20px;
+    margin-bottom: 4px;
+}
+
+.bouton {
+    text-align: center;
+}
+
+.row {
+    margin-right: 5%;
+}
+
+img {
+    width: 45%;
+    border-radius: 6px;
+    margin-top: 3px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+
+.btn {
+    background: linear-gradient(#c8a847, burlywood);
+}
+
+.detailed_img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.logo_croix {
+    width: 5%;
+    height: 20px;
+    margin-top: 20%;
+}
+
 /*///////////////////////////////////////////////// MOBILE VERSION //////////////////////////////////////////////////*/
 
 .center {
