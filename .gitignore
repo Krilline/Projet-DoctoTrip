@@ -1,13 +1,12 @@
 
 ###> symfony/framework-bundle ###
-.idea
+.idea/
 /.env.local
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
-/src/DataFixtures/
 /vendor/
 /.idea/workspace.xml/
 ###< symfony/framework-bundle ###

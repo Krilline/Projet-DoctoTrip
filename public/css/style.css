@@ -146,19 +146,14 @@ img {
     /*///// INDEX //////*/
     .search-autocomplete {
         margin-top: 7em;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
 
     #cardProfil {
         border: none;
     }
 
-    .docHead {
-        border: none;
-    }
-
     #docPhotoIndex {
-        height: 200px;
         border-radius: 5%;
         width: 50%;
         margin-bottom: 1em;
@@ -168,6 +163,22 @@ img {
     #docPhotoIndex {
         display: flex;
         justify-content: center;
+    }
+      
+       /*//// RECAP /////*/
+
+    .container-recap {
+        text-align: center;
+        margin-top: 6em;
+        offset-position: 20px;
+        background-color: #87cefa;
+        width: 80%;
+        border-radius: 3px;
+        border: solid #183691 2px;
+    }
+
+    .recap-button {
+        margin-top: 2em;
     }
 
 
@@ -183,5 +194,4 @@ img {
     .docCategory {
         font-size: 1.5em;
     }
-
 }

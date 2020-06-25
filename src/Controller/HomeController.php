@@ -8,8 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Category;
 use App\Entity\User;
-use App\Form\BookingType;
+use App\Form\ButtonType;
 use App\Form\SearchByCategoryDoctorType;
+use App\Form\BookingType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -51,9 +52,9 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/profil/{id}", name="profil")
+     * @Route("/profile/{id}", name="profile")
      */
-    public function profil(User $user)
+    public function profile(User $user)
     {
         return $this->render('home/profil.html.twig', [
             'user' => $user,
@@ -61,7 +62,22 @@ class HomeController extends AbstractController
     }
 
     /**
+     * @Route("/payment", name="payment")
+     */
+    public function payment()
+    {
+        return $this->render('home/payment.html.twig');
+    }
 
+    /**
+     * @Route("/recap", name="recap")
+     */
+    public function recap()
+    {
+        return $this->render('home/recap.html.twig');
+    }
+
+    /**
      * @Route("/housing", name="index_housing")
      * @param HousingRepository $housingRepository
      * @return Response
