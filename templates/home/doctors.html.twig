@@ -7,10 +7,26 @@
     <h1 class="docTitle">Sélectionnez le médecin de votre choix</h1>
 
     {% for item in doctors %}
-        <img src="{{ item.photo }}"> <p class="docName"> {{ item.firstname }} {{ item.lastname }}</p>
-        <p class="docCategory"> {{ item.category.name }}</p>
-        <p class="docAddress">[{{ item.address }}</p>
-        <h2 class="docDate"> Prochaine Disponibilité : </h2>
-        <p class="docAvailable"> {{ item.available |date('d/m/Y') }}</p>
+
+        <div class="card_ctn">
+            <div class="card center" style="width: 20rem;">
+                <img class="card-img-top" src="{{ item.photo }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title bold docName">{{ item.firstname }} {{ item.lastname }}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ item.category.name }}</li>
+                    <li class="list-group-item">{{ item.address }}</li>
+                    <li class="list-group-item available"><span class="availableTitle">Prochaine Disponibilité :</span>
+                        <br>
+                        {{ item.available |date('d/m/Y') }}</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Voir le profil</a>
+                    <a href="#" class="card-link">Prendre rendez-vous</a>
+                </div>
+            </div>
+        </div>
+
     {% endfor %}
 {% endblock %}
