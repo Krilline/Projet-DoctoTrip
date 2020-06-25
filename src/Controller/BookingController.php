@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Booking;
 use App\Form\BookingType;
+use App\Repository\AirLinesRepository;
 use App\Repository\BookingRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,7 +19,7 @@ class BookingController extends AbstractController
     /**
      * @Route("/", name="booking_index", methods={"GET","POST"})
      */
-    public function index(BookingRepository $bookingRepository, Request $request): Response
+    public function index(BookingRepository $bookingRepository, Request $request, AirLinesRepository $airLinesRepository): Response
     {
         $booking = new Booking();
         $form = $this->createForm(BookingType::class, $booking);
@@ -31,11 +32,15 @@ class BookingController extends AbstractController
 
             return $this->render('booking/index.html.twig', [
                 'form'=>$form->createView(),
+                'plane'=>$airLinesRepository->findAll(),
+                'submited' => true,
             ]);
         }
         return $this->render('booking/index.html.twig', [
             'bookings' => $bookingRepository->findAll(),
             'form' => $form->createView(),
+            'submited' => false,
+            'plane'=>$airLinesRepository->findAll(),
         ]);
     }
 
