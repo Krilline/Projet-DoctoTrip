@@ -113,7 +113,7 @@ class BookingController extends AbstractController
     /**
      * @Route("/calendar/{id}", name="booking_calendar", methods={"GET","POST"})
      */
-    public function calendar(Request $request): Response
+    public function calendar(): Response
     {
             return $this->render('booking/calendar.html.twig');
     }

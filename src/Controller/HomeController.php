@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Booking;
 use App\Repository\HousingRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Category;
 use App\Entity\User;
+use App\Form\BookingType;
 use App\Form\SearchByCategoryDoctorType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -92,8 +94,25 @@ class HomeController extends AbstractController
     /**
      * @Route("/meet", name="meet")
      */
-    public function meet()
+    public function meet(Request $request)
     {
-        return $this->render('home/meet.html.twig');
+        $booking = new Booking();
+        $form = $this->createForm(BookingType::class, $booking);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($booking);
+            $entityManager->flush();
+
+            return $this->render('home/meet.html.twig', [
+                'form'=>$form->createView(),
+                'submited' => true,
+            ]);
+        }
+        return $this->render('home/meet.html.twig', [
+            'submited' => false,
+            'form' => $form->createView(),
+        ]);
     }
 }
