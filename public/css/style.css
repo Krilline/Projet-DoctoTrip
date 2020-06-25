@@ -1,0 +1,76 @@
+/*///////////////////////////////////////////////// MOBILE VERSION //////////////////////////////////////////////////*/
+
+.center {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 415px) {
+
+    /*///////// NAVBAR /////////*/
+    .navbar {
+        background-color: #87CEFA;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+
+    }
+
+    .menu {
+        width: 2em;
+    }
+
+    .logo {
+        width: 4em;
+    }
+
+    .user {
+        width: 2em;
+    }
+
+    /*///////// DOCTORS /////////*/
+    .docTitle {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-top: 3em;
+    }
+
+    .card_ctn{
+        margin-bottom: 5em;
+    }
+
+    .docPhoto {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .docName{
+        font-size: 1.5em;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .availableTitle{
+        font-size: 0.7em;
+    }
+
+    .available {
+        padding-top: 0px;
+        font-size: 1.5em;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+}
