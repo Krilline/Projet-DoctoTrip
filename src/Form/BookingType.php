@@ -13,7 +13,6 @@ class BookingType extends AbstractType
     {
         $builder
             ->add('beginAt')
-            ->add('endAt')
             ->add('title')
         ;
     }
