@@ -3,6 +3,7 @@
 {% block title %}Home{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/algolia-autocomplete.css') }}">
 {% endblock %}
 {% block body %}
@@ -10,7 +11,7 @@
     <div class="container">
         <div class="row justify-content-center search-autocomplete">
             {{ form_row(form.name, { 'label': ' '}) }}
-            <button class="btn btn-primary" id="search">{{ button_label|default('Search') }}</button>
+            <button class="btn btn-primary" id="search"><i class="fa fa-search"></i></button>
         </div>
     </div>
     {{ form_end(form) }}
@@ -33,7 +34,7 @@
                             {{ result.available |date('d/m/Y') }}</li>
                     </ul>
                     <div class="card-body">
-                        <a href="{{ path('profil', {'id': result.id}) }}" class="card-link">PROFILE</a>
+                        <a href="{{ path('profile', {'id': result.id}) }}" class="card-link">PROFILE</a>
                         <a href="#" class="card-link">BOOK APPOINTMENT</a>
                     </div>
                 </div>
