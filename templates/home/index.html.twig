@@ -17,22 +17,25 @@
     {{ form_end(form) }}
     {% if results %}
         {% for result in results %}
+            <div class="docHead">
+                <img id="docPhotoIndex" class="card-img-top" src="{{ result.photo }}" alt="Card image cap">
+            </div>
             <div class="card_ctn">
                 <div class="card center" style="width: 20rem;">
-                    <img class="card-img-top" src="{{ result.photo }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title bold docName">{{ result.firstname }} {{ result.lastname }}</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ result.category.name }}</li>
-                        <li class="list-group-item">{{ result.address }}</li>
-                        <li class="list-group-item available"><span class="availableTitle">Prochaine Disponibilité :</span>
+                        <li class="list-group-item bold">{{ result.category.name }}</li>
+                        <li class="list-group-item"><span class="bold"> Address :</span> {{ result.address }}</li>
+                        <li class="list-group-item available"><span
+                                    class="availableTitle bold">Next Availability :</span>
                             <br>
                             {{ result.available |date('d/m/Y') }}</li>
                     </ul>
                     <div class="card-body">
-                        <a href="{{ path('profile', {'id': result.id}) }}" class="card-link">Voir le profil</a>
-                        <a href="#" class="card-link">Prendre rendez-vous</a>
+                        <a href="{{ path('profile', {'id': result.id}) }}" class="card-link">PROFILE</a>
+                        <a href="#" class="card-link">BOOK APPOINTMENT</a>
                     </div>
                 </div>
             </div>

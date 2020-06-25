@@ -1,3 +1,60 @@
+
+.container {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-top: 20%;
+    margin-left: 4%;
+}
+.card-text{
+    color: #787878;
+}
+
+h5 {
+    color: #c8a847
+}
+
+.logo_housing {
+    width: 7%;
+    height: 20px;
+    margin-bottom: 4px;
+}
+
+.bouton {
+    text-align: center;
+}
+
+.row {
+    margin-right: 5%;
+}
+
+img {
+    width: 45%;
+    border-radius: 6px;
+    margin-top: 3px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+
+.btn {
+    background: linear-gradient(#c8a847, burlywood);
+}
+
+.detailed_img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.logo_croix {
+    width: 5%;
+    height: 20px;
+    margin-top: 20%;
+}
+
 /*///////////////////////////////////////////////// MOBILE VERSION //////////////////////////////////////////////////*/
 
 .center {
@@ -8,6 +65,10 @@
 
 .bold{
     font-weight: bold;
+}
+
+.justify{
+    text-align: justify;
 }
 
 @media only screen and (max-width: 415px) {
@@ -45,6 +106,7 @@
 
     .card_ctn{
         margin-bottom: 5em;
+        border: none;
     }
 
     .docPhoto {
@@ -98,5 +160,37 @@
 
     .recap-button {
         margin-top: 2em;
+    }
+
+    .docHead{
+        border:none;
+    }
+
+    #docPhotoIndex{
+        height: 200px;
+        border-radius: 5%;
+        width: 50%;
+        margin-bottom: 1em;
+    }
+
+    .docHead,
+    #docPhotoIndex{
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    /*///////// PROFIL /////////*/
+    #docPhoto{
+        border-radius: 100%;
+        height: 250px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .docCategory{
+        font-size: 1.5em;
     }
 }

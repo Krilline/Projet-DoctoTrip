@@ -2,12 +2,15 @@
 
 namespace App\Controller;
 
+use App\Entity\Booking;
+use App\Repository\HousingRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Category;
 use App\Entity\User;
 use App\Form\ButtonType;
 use App\Form\SearchByCategoryDoctorType;
-use http\Exception\BadUrlException;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Form\BookingType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -72,5 +75,60 @@ class HomeController extends AbstractController
     public function recap()
     {
         return $this->render('home/recap.html.twig');
+    }
+
+    /**
+     * @Route("/housing", name="index_housing")
+     * @param HousingRepository $housingRepository
+     * @return Response
+     */
+    public function housing(HousingRepository $housingRepository): Response
+    {
+        return $this->render('home/housing.html.twig', [
+            'housings' => $housingRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/housing/show", name="show_housing")
+     * @return Response
+     */
+    public function showHousing(): Response
+    {
+        return $this->render('home/showHousing.html.twig');
+    }
+
+    /**
+     * @Route("/housing/detailed", name="detailed_housing")
+     * @return Response
+     */
+    public function detailedHousing(): Response
+    {
+        return $this->render('home/imageHousing.html.twig');
+    }
+
+    /**
+     * @Route("/meet", name="meet")
+     */
+    public function meet(Request $request)
+    {
+        $booking = new Booking();
+        $form = $this->createForm(BookingType::class, $booking);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($booking);
+            $entityManager->flush();
+
+            return $this->render('home/meet.html.twig', [
+                'form'=>$form->createView(),
+                'submited' => true,
+            ]);
+        }
+        return $this->render('home/meet.html.twig', [
+            'submited' => false,
+            'form' => $form->createView(),
+        ]);
     }
 }
