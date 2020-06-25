@@ -22,11 +22,10 @@ class HomeController extends AbstractController
     /**
      * @Route("/doctors", name="doctors")
      */
-    public function doctors(UserRepository $userRepository, CategoryRepository $categoryRepository)
+    public function doctors(UserRepository $userRepository)
     {
         return $this->render('home/doctors.html.twig', [
             'doctors' => $userRepository->findAll(),
-            'categories' => $categoryRepository->findAll(),
         ]);
     }
 }

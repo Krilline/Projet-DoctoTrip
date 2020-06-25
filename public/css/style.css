@@ -1,0 +1,31 @@
+/*///////////////////////////////////////////////// MOBILE VERSION //////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 415px) {
+
+    /*///////// NAVBAR /////////*/
+
+    .navbar{
+       background-color: #87CEFA;
+        margin-bottom: 1em;
+    }
+    .menu{
+        width: 2em;
+    }
+
+    .logo{
+        width: 4em;
+    }
+
+    .user {
+    width: 2em;
+    }
+
+    /*///////// DOCTORS /////////*/
+    .docTitle {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+
+}
