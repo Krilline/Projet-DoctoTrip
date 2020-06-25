@@ -156,6 +156,7 @@ img {
     }
 
     #search {
+        border: none;
         margin-left: 2em;
         margin-top: 0;
         background-color: #fad889; !important;
@@ -243,6 +244,11 @@ img {
 
     .docCategory {
         font-size: 1.5em;
+        background-color: #f9f7f2;
+    }
+
+    .profile-header {
+        background-color: #f9f7f2;
     }
 
     /*///////// CALENDAR_FORM ///////*/
