@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+    <div class="row">
+    {% for housing in housings %}
+        <div class="card col-3 m-3" style="width: 18rem;">
+            <h5 class="card-title">{{ housing.name }}</h5>
+            <img class="card-img-top" src="{{ housing.poster }}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">{{ housing.city.name }}</p>
+                <p class="card-text">Address: {{ housing.address }}</p>
+                <a href="{{ path('show_housing') }}" class="btn btn-primary">see</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

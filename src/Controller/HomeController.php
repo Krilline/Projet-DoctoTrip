@@ -26,18 +26,16 @@ class HomeController extends AbstractController
      * @return Response
      */
 
-    /**
-     * @Route("/housing/show", name="show_housing")
-     * @param HousingRepository $housingRepository
-     * @return Response
-     */
     public function housing(HousingRepository $housingRepository): Response
     {
         return $this->render('home/housing.html.twig', [
             'housings' => $housingRepository->findAll(),
         ]);
     }
-
+    /**
+     * @Route("/housing/show", name="show_housing")
+     * @return Response
+     */
     public function showHousing(): Response
     {
         return $this->render('home/showHousing.html.twig');
