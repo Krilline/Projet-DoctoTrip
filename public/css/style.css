@@ -1,17 +1,143 @@
+
 .container {
     grid-template-columns: 100px 50px 100px;
     grid-template-rows: 80px auto 80px;
     column-gap: 10px;
     row-gap: 15px;
+    margin-top: 20%;
+    margin-left: 4%;
+}
+.card-text{
+    color: #787878;
 }
 
-img{
+h5 {
+    color: #c8a847
+}
+
+.logo_housing {
+    width: 7%;
+    height: 20px;
+    margin-bottom: 4px;
+}
+
+.bouton {
+    text-align: center;
+}
+
+.row {
+    margin-right: 5%;
+}
+
+img {
     width: 45%;
     border-radius: 6px;
     margin-top: 3px;
 }
 
-.btn-info{
+.btn {
     margin-top: 10px;
     margin-bottom: 10%;
+}
+
+.btn {
+    background: linear-gradient(#c8a847, burlywood);
+}
+
+.detailed_img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.logo_croix {
+    width: 5%;
+    height: 20px;
+    margin-top: 20%;
+}
+
+/*///////////////////////////////////////////////// MOBILE VERSION //////////////////////////////////////////////////*/
+
+.center {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 415px) {
+
+    /*///////// NAVBAR /////////*/
+    .navbar {
+        background-color: #87CEFA;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+
+    }
+
+    .menu {
+        width: 2em;
+    }
+
+    .logo {
+        width: 4em;
+    }
+
+    .user {
+        width: 2em;
+    }
+
+    /*///////// DOCTORS /////////*/
+    .docTitle {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-top: 3em;
+    }
+
+    .card_ctn{
+        margin-bottom: 5em;
+    }
+
+    .docPhoto {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .docName{
+        font-size: 1.5em;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .availableTitle{
+        font-size: 0.7em;
+    }
+
+    .available {
+        padding-top: 0px;
+        font-size: 1.5em;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    /*///// INDEX //////*/
+
+    .search-autocomplete {
+        margin-top: 7em;
+        margin-bottom: 4em;
+    }
+
+    #cardProfil {
+       border: none;
+    }
 }

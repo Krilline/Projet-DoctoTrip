@@ -106,4 +106,5 @@ class AirLines
 
         return $this;
     }
+
 }
