@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    <h1 class="docTitle">Docteur {{ user.firstname }} {{ user.lastname }}</h1>
+<div class="card_ctn_profil">
+    <div class="card center"  id="cardProfil" style="width: 20rem;">
+        <img class="card-img-top" src="{{ user.photo }}" alt="Card image cap">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ user.category.name }}</li>
+            <li class="list-group-item">{{ user.address }}</li>
+            <li class="list-group-item available"><span class="availableTitle">Prochaine Disponibilité :</span>
+                <br>
+                {{ user.available |date('d/m/Y') }}</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Prendre rendez-vous</a>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

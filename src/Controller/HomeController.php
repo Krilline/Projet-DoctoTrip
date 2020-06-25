@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Repository\CategoryRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -26,6 +27,16 @@ class HomeController extends AbstractController
     {
         return $this->render('home/doctors.html.twig', [
             'doctors' => $userRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/profil/{id}'", name="profil")
+     */
+    public function profil(User $user)
+    {
+        return $this->render('home/profil.html.twig', [
+            'user' => $user,
         ]);
     }
 }

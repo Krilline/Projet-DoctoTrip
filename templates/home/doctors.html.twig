@@ -22,7 +22,7 @@
                         {{ item.available |date('d/m/Y') }}</li>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link">Voir le profil</a>
+                    <a class="card-link" href="{{ path('profil', {'id': item.id}) }}">Voir le profil</a>
                     <a href="#" class="card-link">Prendre rendez-vous</a>
                 </div>
             </div>
