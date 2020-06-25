@@ -1,6 +1,50 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Home{% endblock %}
-
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/algolia-autocomplete.css') }}">
+{% endblock %}
 {% block body %}
+    {{ form_start(form) }}
+    <div class="container">
+        <div class="row justify-content-center search-autocomplete">
+            {{ form_row(form.name, { 'label': ' '}) }}
+            <button class="btn btn-primary" id="search">{{ button_label|default('Search') }}</button>
+        </div>
+    </div>
+    {{ form_end(form) }}
+    {% if results %}
+        {% for result in results %}
+            <div class="card_ctn">
+                <div class="card center" style="width: 20rem;">
+                    <img class="card-img-top" src="{{ result.photo }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title bold docName">{{ result.firstname }} {{ result.lastname }}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{ result.category.name }}</li>
+                        <li class="list-group-item">{{ result.address }}</li>
+                        <li class="list-group-item available"><span class="availableTitle">Prochaine Disponibilité :</span>
+                            <br>
+                            {{ result.available |date('d/m/Y') }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{{ path('profil', {'id': result.id}) }}" class="card-link">Voir le profil</a>
+                        <a href="#" class="card-link">Prendre rendez-vous</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    <script src="{{ asset('js/algolia-autocomplete.js') }}"></script>
 {% endblock %}

@@ -73,8 +73,14 @@
         text-align: center;
     }
 
+    /*///// INDEX //////*/
 
-    #cardProfil{
+    .search-autocomplete {
+        margin-top: 7em;
+        margin-bottom: 4em;
+    }
+
+    #cardProfil {
        border: none;
     }
 }
