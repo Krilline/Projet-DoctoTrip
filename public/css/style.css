@@ -61,9 +61,10 @@ img {
     margin-top: 20%;
 }
 
-.black{
+.black {
     color: black;
 }
+
 /*///////////////////////////////////////////////// MOBILE VERSION //////////////////////////////////////////////////*/
 
 .center {
@@ -159,7 +160,8 @@ img {
         border: none;
         margin-left: 2em;
         margin-top: 0;
-        background-color: #fad889; !important;
+        background-color: #fad889;
+    !important;
     }
 
     .edito-ctn {
@@ -215,9 +217,8 @@ img {
         display: flex;
         justify-content: center;
     }
-      
-       /*//// RECAP /////*/
 
+    /*//// RECAP /////*/
     .container-recap {
         text-align: center;
         margin-top: 6em;
@@ -252,10 +253,86 @@ img {
     }
 
     /*///////// CALENDAR_FORM ///////*/
-
     .calendar_center {
         width: 80%;
         margin: auto;
     }
+}
+
+/*///////////////////////////////////////////////// DESKTOP VERSION //////////////////////////////////////////////////*/
+@media only screen and (min-width: 415px) {
+    .navbar {
+        height: 50px;
+        margin-bottom: 0px;
+    }
+
+    .menu {
+        width: 3em;
+    }
+
+    .logo {
+        font-family: 'Great Vibes', cursive;
+        font-size: 50px;
+        padding-top: 0.8em;
+        color: #fad889;
+    }
+
+    .user {
+        width: 3em;
+    }
+
+    #search {
+        border: none;
+        margin-left: 2em;
+        margin-top: 0;
+        background-color: #fad889;
+    }
+
+    .index-header {
+        margin-left: 350px;
+        margin-top: 0px;
+    }
+
+
+    .edito-ctn {
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+
+    .edito .edito-logo {
+        flex-direction: row;
+    }
+
+    .edito-hr {
+        width: 60%;
+        margin-top: 2em;
+    }
+
+    .edito-main {
+        font-family: 'Great Vibes', cursive;
+        font-size: 40px;
+        width: 50%;
+        margin-top: 2em;
+        letter-spacing: 2px;
+    }
+
+    .edito {
+        margin-top: 3em;
+        width: 50%;
+        margin-left: 2em;
+        font-size: 2em;
+    }
+
+    .fa-search {
+        color: black;
+    }
+
+    .edito-logo {
+        width: 350px;
+    }
 
 }
+
