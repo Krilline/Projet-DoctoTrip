@@ -70,6 +70,14 @@ class HomeController extends AbstractController
     }
 
     /**
+     * @Route("/confirmation", name="confirmation")
+     */
+    public function confirmation()
+    {
+        return $this->render('home/confirmation.html.twig');
+    }
+
+    /**
      * @Route("/recap", name="recap")
      */
     public function recap()
