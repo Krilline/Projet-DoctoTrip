@@ -44,10 +44,9 @@ img {
 .btn {
     margin-top: 10px;
     margin-bottom: 10%;
-}
-
-.btn {
+    border: none;
     background-color: #fad889;
+
 }
 
 .detailed_img {
@@ -215,21 +214,57 @@ img {
         display: flex;
         justify-content: center;
     }
-      
-       /*//// RECAP /////*/
+       /*//// CONFIRMATION /////*/
 
-    .container-recap {
+    .container-confirmation {
         text-align: center;
         margin-top: 6em;
         offset-position: 20px;
-        background-color: #87cefa;
         width: 80%;
         border-radius: 3px;
-        border: solid #183691 2px;
+        border: solid #c8a847 2px;
     }
 
-    .recap-button {
+    .confirmation-button {
         margin-top: 2em;
+    }
+
+    /*///////// RECAP ///////*/
+
+    .container-recap {
+        margin-top: 7em;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recap-plane {
+        margin-right: -2.5em;
+    }
+
+    .recap-ctn {
+        display: flex;
+    }
+
+    .recap-left, .recap-right {
+        flex-direction: row;
+    }
+
+    .recap-left {
+        width: 100%;
+    }
+
+    .recap-price {
+        margin-top: 1em;
+    }
+
+    .recap-right {
+        margin-left: 3em;
+    }
+
+    .recap-hr {
+        width: 60%;
+        margin-top: 1em;
     }
 
 
@@ -257,5 +292,4 @@ img {
         width: 80%;
         margin: auto;
     }
-
 }
