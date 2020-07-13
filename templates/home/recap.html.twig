@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recap{% endblock %}
+
+{% block body %}
+    <div class="container-fluid container-recap">
+        <h5 class="center">Flight</h5>
+        <div class="recap-ctn">
+            <img class="recap-left recap-plane" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Airbus_A380-861%2C_Air_France_JP7538554.jpg/440px-Airbus_A380-861%2C_Air_France_JP7538554.jpg" alt="...">
+            <p class="recap-right center"><strong><em>-Arrival</em></strong> Moscow→France 07/23/2020 <br> <strong><em>-Departure</em></strong> France→Moscow 07/23/2020</p>
+        </div>
+        <p class="center recap-price"><em>Price: 2000$</em></p>
+        <hr class="recap-hr">
+        <h5 class="center">Housing</h5>
+        <div class="recap-ctn">
+            <img class="recap-left" src="https://i.postimg.cc/2j7Nbkyd/villa3.jpg" alt="...">
+            <p class="recap-right center"><strong><em>-Name</em></strong> <br> Villa Amour <br> <strong><em>-Address</em></strong> <br> 8, allée Primo Levi, Nice</p>
+        </div>
+        <p class="center recap-price"><em>Price: 10000$</em></p>
+        <hr class="recap-hr">
+        <h5 class="center">Doctor</h5>
+        <div class="recap-ctn">
+            <img class="recap-left" src="https://i.postimg.cc/dVhLDBZM/docF1.jpg" alt="...">
+            <p class="recap-right center"><strong><em>-Name</em></strong> <br> Elisabeth Cohen <br> <strong><em>-Speciality</em></strong> <br> Dentist</p>
+        </div>
+        <p class="center recap-price"><em>Price: Quote Processing</em></p>
+        <hr class="recap-hr">
+        <p class="center recap-price"><strong><em>Total:</em> ~$12000</strong></p>
+        <hr class="recap-hr">
+    </div>
+    <div class="row justify-content-center">
+        <a class="btn btn-primary" id="search" href="{{ path('payment') }}">Checkout</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/algolia-autocomplete.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="index-header">
+        {{ form_start(form) }}
+        <div class="container">
+            <div class="row justify-content-center search-autocomplete">
+                {{ form_row(form.name, { 'label': ' '}) }}
+                <button class="btn btn-primary" id="search"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+    {% if results %}
+        {% for result in results %}
+            <div class="docHead">
+                <img id="docPhotoIndex" class="card-img-top" src="{{ result.photo }}" alt="Card image cap">
+            </div>
+            <div class="card_ctn">
+                <h5 class="card-title bold docName">{{ result.firstname }} {{ result.lastname }}</h5>
+                <div class="card center" style="width: 20rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bold">{{ result.category.name }}</li>
+                        <li class="list-group-item"><span class="bold"> Address :</span> {{ result.address }}</li>
+                        <li class="list-group-item available"><span
+                                    class="availableTitle bold">Next Availability :</span>
+                            <br>
+                            {{ result.available |date('d/m/Y') }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{{ path('profile', {'id': result.id}) }}" class="card-link">PROFILE</a>
+                        <a href="#" class="card-link">BOOK APPOINTMENT</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="edito-ctn">
+            <img class="edito-logo" src="https://i.postimg.cc/nV4Xj2Fg/My-Doc-Trip-2.png" alt="...">
+            <div class="edito">
+                <p>Find the best doctors in France and book your appointment and your trip in a few clicks</p>
+            </div>
+        </div>
+        <hr class="edito-hr">
+        <div class="edito-ctn">
+            <p class="edito-main center">Travel safe for your health</p>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    <script src="{{ asset('js/algolia-autocomplete.js') }}"></script>
+{% endblock %}

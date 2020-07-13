@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -43,6 +44,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("search")
      */
     private $lastname;
 
@@ -72,14 +74,19 @@ class User implements UserInterface
     private $category;
 
     /**
-     * @ORM\OneToMany(targetEntity=FeedBack::class, mappedBy="user")
+     * @ORM\Column(type="string", length=255)
      */
-    private $feedBacks;
+    private $photo;
 
-    public function __construct()
-    {
-        $this->feedBacks = new ArrayCollection();
-    }
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $available;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $resume;
 
     public function getId(): ?int
     {
@@ -245,6 +252,54 @@ class User implements UserInterface
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(string $photo): self
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getJob(): ?string
+    {
+        return $this->job;
+    }
+
+    public function setJob(string $job): self
+    {
+        $this->job = $job;
+
+        return $this;
+    }
+
+    public function getAvailable(): ?\DateTimeInterface
+    {
+        return $this->available;
+    }
+
+    public function setAvailable(\DateTimeInterface $available): self
+    {
+        $this->available = $available;
+
+        return $this;
+    }
+
+    public function getResume(): ?string
+    {
+        return $this->resume;
+    }
+
+    public function setResume(string $resume): self
+    {
+        $this->resume = $resume;
 
         return $this;
     }

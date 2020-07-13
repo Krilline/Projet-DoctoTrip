@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking index{% endblock %}
+
+{% block body %}
+    <h1 class="docTitle">Choose a date for the intervention.</h1>
+    <div class="calendar_center">{{ include('/booking/calendar.html.twig') }}
+    {{ include('booking/_form.html.twig') }}</div>
+
+    {% if submited == true %}
+                {% for planes in plane %}
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Airbus_A380-861%2C_Air_France_JP7538554.jpg/440px-Airbus_A380-861%2C_Air_France_JP7538554.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ planes.departureCountry }} - {{ planes.arrivalCountry }}</h5>
+                        <p class="card-text">{{ planes.departureDate|date("F jS \\a\\t g:ia") }}</p>
+                        <a href="{{ path('index_housing') }}" class="btn btn-primary">Reserve</a>
+                    </div>
+                </div>
+            {% endfor %}
+    {% else %}
+        <p> Please, select a date.</p>
+    {% endif %}
+{% endblock %}

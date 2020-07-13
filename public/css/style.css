@@ -1,0 +1,357 @@
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #f9f7f2;
+}
+
+.container {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-top: 20%;
+    margin-left: 4%;
+}
+
+.card-text {
+    color: #787878;
+}
+
+h5 {
+    color: #c8a847
+}
+
+.logo_housing {
+    width: 7%;
+    height: 20px;
+    margin-bottom: 4px;
+}
+
+.bouton {
+    text-align: center;
+}
+
+.row {
+    margin-right: 5%;
+}
+
+img {
+    width: 45%;
+    border-radius: 6px;
+    margin-top: 3px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10%;
+    border: none;
+    background-color: #fad889;
+
+}
+
+.detailed_img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.logo_croix {
+    width: 5%;
+    height: 20px;
+    margin-top: 20%;
+}
+
+.black{
+    color: black;
+}
+/*///////////////////////////////////////////////// MOBILE VERSION //////////////////////////////////////////////////*/
+
+.center {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.justify {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 415px) {
+
+    /*///////// NAVBAR /////////*/
+    .navbar {
+        background-color: #f9f7f2;
+        width: 100%;
+        height: 85px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        padding-top: 0px;
+    }
+
+    .menu {
+        width: 2em;
+    }
+
+    .logo {
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+        padding-top: 0.8em;
+        color: #fad889;
+    }
+
+    .user {
+        width: 2em;
+    }
+
+    /*///////// DOCTORS ////////*/
+    .docTitle {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-top: 3em;
+    }
+
+    .card_ctn {
+        margin-bottom: 5em;
+        border: none;
+    }
+
+    .docPhoto {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .docName {
+        font-size: 1.5em;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .availableTitle {
+        font-size: 0.7em;
+    }
+
+    .available {
+        padding-top: 0px;
+        font-size: 1.5em;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    /*///// INDEX //////*/
+    .search-autocomplete {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding-top: 2em;
+    }
+
+    #search {
+        border: none;
+        margin-left: 2em;
+        margin-top: 0;
+        background-color: #fad889; !important;
+    }
+
+    .edito-ctn {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .edito .edito-logo {
+        flex-direction: row;
+    }
+
+    .edito-hr {
+        width: 60%;
+        margin-top: 2em;
+    }
+
+    .edito-main {
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+        width: 80%;
+        margin-top: 2em;
+        letter-spacing: 2px;
+    }
+
+    .edito {
+        margin-top: 1em;
+        width: 50%;
+        margin-left: 2em;
+    }
+
+    .fa-search {
+        color: black;
+    }
+
+    .index-header {
+        background-color: #665f5f;
+    }
+
+    #cardProfil {
+        border: none;
+    }
+
+    #docPhotoIndex {
+        border-radius: 5%;
+        width: 50%;
+        margin-bottom: 1em;
+    }
+
+    .docHead,
+    #docPhotoIndex {
+        display: flex;
+        justify-content: center;
+    }
+       /*//// CONFIRMATION /////*/
+
+    .container-confirmation {
+        text-align: center;
+        margin-top: 6em;
+        offset-position: 20px;
+        width: 80%;
+        border-radius: 3px;
+        border: solid #c8a847 2px;
+    }
+
+    .confirmation-button {
+        margin-top: 2em;
+    }
+
+    /*///////// RECAP ///////*/
+
+    .container-recap {
+        margin-top: 7em;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recap-plane {
+        margin-right: -2.5em;
+    }
+
+    .recap-ctn {
+        display: flex;
+    }
+
+    .recap-left, .recap-right {
+        flex-direction: row;
+    }
+
+    .recap-left {
+        width: 50%;
+    }
+
+    .recap-price {
+        margin-top: 1em;
+    }
+
+    .recap-right {
+        margin-left: 3em;
+    }
+
+    .recap-hr {
+        width: 60%;
+        margin-top: 1em;
+    }
+
+
+    /*///////// PROFIL /////////*/
+    #docPhoto {
+        border-radius: 100%;
+        height: 250px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .docCategory {
+        font-size: 1.5em;
+        background-color: #f9f7f2;
+    }
+
+    .profile-header {
+        background-color: #f9f7f2;
+    }
+
+    /*///////// CALENDAR_FORM ///////*/
+
+    .calendar_center {
+        width: 80%;
+        margin: auto;
+    }
+}
+/*///////////////////////////////////////////////// DESKTOP VERSION //////////////////////////////////////////////////*/
+@media only screen and (min-width: 415px) {
+    .navbar {
+        height: 50px;
+        margin-bottom: 0px;
+    }
+    .menu {
+        width: 3em;
+    }
+    .logo {
+        font-family: 'Great Vibes', cursive;
+        font-size: 50px;
+        padding-top: 0.8em;
+        color: #fad889;
+    }
+    .user {
+        width: 3em;
+    }
+    #search {
+        border: none;
+        margin-left: 2em;
+        margin-top: 0;
+        background-color: #fad889;
+    }
+    .index-header {
+        margin-left: 350px;
+        margin-top: 0px;
+    }
+    .edito-ctn {
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+    .edito .edito-logo {
+        flex-direction: row;
+    }
+    .edito-hr {
+        width: 60%;
+        margin-top: 2em;
+    }
+    .edito-main {
+        font-family: 'Great Vibes', cursive;
+        font-size: 40px;
+        width: 50%;
+        margin-top: 2em;
+        letter-spacing: 2px;
+    }
+    .edito {
+        margin-top: 3em;
+        width: 50%;
+        margin-left: 2em;
+        font-size: 2em;
+    }
+    .fa-search {
+        color: black;
+    }
+    .edito-logo {
+        width: 350px;
+    }
+}

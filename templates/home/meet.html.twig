@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking Doctor{% endblock %}
+
+{% block body %}
+    {% if submited == false %}
+    <h1 class="docTitle">Book your e-meeting for a first interview before programming the intervention.</h1>
+        <div class="calendar_center">{{ include('/booking/calendar.html.twig') }}
+            {{ include('booking/_form.html.twig') }}</div>
+    {% elseif submited == true %}
+    <h1 class="docTitle"><a href="https://meet.google.com/rmq-taep-adw"> Link to interview</a>
+    <a href="{{ path('booking_index') }}"> continue</a></h1>
+    {% endif %}
+{% endblock %}
